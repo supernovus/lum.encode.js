@@ -2,6 +2,10 @@
 
 A bunch of encoding libraries.
 
+Among other things, it offers a pure JS implementation of my 
+[Safe64](https://github.com/supernovus/lum.encode.php)
+data serialization and encoding format.
+
 ## Official URLs
 
 This library can be found in two places:
