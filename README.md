@@ -17,10 +17,6 @@ migration process as painless as possible, but some changes will be required.
   that we're now using for generating the hashes.
 - Minor cleanups in `base91` and `utils` modules.
 
-### TODO:
-
-- Rewrite `hash` to use `globalThis.crypto.subtle` API.
-
 ## Official URLs
 
 This library can be found in two places:
