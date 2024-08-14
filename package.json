@@ -23,7 +23,7 @@
   },
   "devDependencies":
   {
-    "@lumjs/tests": "^1.8.0"
+    "@lumjs/tests": "^2.0.0"
   },
   "scripts":
   {

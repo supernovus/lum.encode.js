@@ -4,7 +4,6 @@ const plan = 6;
 
 const t = require('@lumjs/tests').new({module, plan});
 const lib = require('../lib/hash');
-const WhenReady = require('@lumjs/when-events').Ready;
 
 const s0 = "Test"
 
@@ -19,43 +18,36 @@ const s0_s1_hex = "c65f7c2fd2743b589a7f015ce6d43656ae440f77b02cafe2b47064fbf404b
 
 const h1 = new lib();
 
-const ready = new WhenReady(plan, () => t.done());
-
 const addS0S1 = function()
 {
   h1.add(s0);
   h1.add(s1);
 }
 
-function testVal(...args)
-{
-  t.is(...args);
-  ready.exec();
-}
-
 async function runTests()
 {
   let val = await h1.hex(s1);
-  testVal(val, s1_hex, 'hex(string)');
+  t.is(val, s1_hex, 'hex(string)');
 
   val = await h1.base64(s1);
-  testVal(val, s1_b64, 'base64(string)');
+  t.is(val, s1_b64, 'base64(string)');
 
   addS0S1();
   val = await h1.hex();
-  testVal(val, s0_s1_hex, 'add() with hex()');
+  t.is(val, s0_s1_hex, 'add() with hex()');
   
   addS0S1();
   val = await h1.base64();
-  testVal(val, s0_s1_b64, 'add() with base64()');
+  t.is(val, s0_s1_b64, 'add() with base64()');
   
   addS0S1();
   val = await h1.base64(null, {url: true});
-  testVal(val, s0_s1_s64, 'add() with URL-safe Base64()');
+  t.is(val, s0_s1_s64, 'add() with URL-safe Base64()');
   
   addS0S1();
   val = await h1.base91();
-  testVal(val, s0_s1_b91, 'add() with base91()');
+  t.is(val, s0_s1_b91, 'add() with base91()');
 }
 
-runTests();
+t.async(runTests);
+t.done();
