@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.2.0]
+### Added
+- intToBytes() and hexToBytes() functions added to util.js
+- A HMAC wrapper library, and a generic Signature class used by it.
+- HOTP/TOTP generation and valdiation classes.
+  They are loosely based on the ones from the `notp` package, but while that
+  package exports some static functions and depends on the node.js `crypto`
+  module, this one has two JS classes and uses the SubtleCrypto API.
+- A TODO file with things I want to do.
+
 ## [2.1.0]
 ### Changed
 - The `base64` library now supports the `Uint8Array.fromBase64` static method,

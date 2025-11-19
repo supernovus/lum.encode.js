@@ -1,6 +1,6 @@
 {
   "name": "@lumjs/encode",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "main": "lib/index.js",
   "exports":
   {
@@ -8,6 +8,10 @@
     "./base64": "./lib/base64.js",
     "./base91": "./lib/base91.js",
     "./hash": "./lib/hash.js",
+    "./hmac": "./lib/hmac.js",
+    "./hotp": "./lib/hotp.js",
+    "./signature": "./lib/signature.js",
+    "./totp": "./lib/totp.js",
     "./util": "./lib/util.js",
     "./package.json": "./package.json"
   },
@@ -19,7 +23,7 @@
   },
   "dependencies": 
   {
-    "@lumjs/core": "^1.26.0"
+    "@lumjs/core": "^1.28.0"
   },
   "devDependencies":
   {
