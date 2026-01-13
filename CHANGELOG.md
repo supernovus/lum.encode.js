@@ -6,7 +6,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [2.2.0]
+## [2.2.2] - 2026-01-13
+### Fixed
+- A few typos and bugs in the HMAC/HOTP/TOTP libraries I added last time.
+- Added some missing timestamps in this changelog.
+- Fixed references in this changelog.
+### Changed
+- While fixing the broken bits, I made a bunch of previously hard-coded values
+  into options. They'll need to be properly documented at some point.
+- Changed how `hash.getAlgorithm()` works behind the scenes.
+- v2.2.1 never got published for reasons, so no log or tag for it.
+
+## [2.2.0] - 2025-11-18
 ### Added
 - intToBytes() and hexToBytes() functions added to util.js
 - A HMAC wrapper library, and a generic Signature class used by it.
@@ -16,7 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   module, this one has two JS classes and uses the SubtleCrypto API.
 - A TODO file with things I want to do.
 
-## [2.1.0]
+## [2.1.0] - 2025-90-09
 ### Changed
 - The `base64` library now supports the `Uint8Array.fromBase64` static method,
   and the corresponding `toBase64()` instance method. As those are rather new
@@ -52,7 +63,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/supernovus/lum.encode.js/compare/v2.1.0...HEAD
+[Unreleased]: https://github.com/supernovus/lum.encode.js/compare/v2.2.2...HEAD
+[2.2.2]: https://github.com/supernovus/lum.encode.js/compare/v2.2.0...v2.2.2
+[2.2.0]: https://github.com/supernovus/lum.encode.js/compare/v2.1.0...v2.2.0
 [2.1.0]: https://github.com/supernovus/lum.encode.js/compare/v2.0.0...v2.1.0
 [2.0.0]: https://github.com/supernovus/lum.encode.js/compare/v1.2.0...v2.0.0
 [1.2.0]: https://github.com/supernovus/lum.encode.js/compare/v1.1.0...v1.2.0
