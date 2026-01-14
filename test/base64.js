@@ -25,6 +25,4 @@ t.is(lib.decode(e2),      s2,  'decode(urlBase64)');
 t.is(lib.encode(s2, o2t), e2t, 'encode(text, :useTildes)');
 t.is(lib.decode(e2t),     s2,  'decode(urlTildes)');
 
-// TODO: the encodeData() and decodeData() functions.
-
 t.done();

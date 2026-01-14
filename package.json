@@ -1,10 +1,11 @@
 {
   "name": "@lumjs/encode",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "main": "lib/index.js",
   "exports":
   {
     ".": "./lib/index.js",
+    "./base32": "./lib/base32.js",
     "./base64": "./lib/base64.js",
     "./base91": "./lib/base91.js",
     "./hash": "./lib/hash.js",
