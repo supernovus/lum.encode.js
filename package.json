@@ -1,6 +1,6 @@
 {
   "name": "@lumjs/encode",
-  "version": "2.3.2",
+  "version": "2.4.0",
   "main": "lib/index.js",
   "exports":
   {
@@ -11,6 +11,7 @@
     "./hash": "./lib/hash.js",
     "./hmac": "./lib/hmac.js",
     "./hotp": "./lib/hotp.js",
+    "./pem": "./lib/pem.js",
     "./signature": "./lib/signature.js",
     "./totp": "./lib/totp.js",
     "./util": "./lib/util.js",

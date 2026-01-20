@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.4.0] - 2026-01-19
+### Added
+- A new `pem` module (which exports a `PEM` class) for parsing PEM strings.
+- Tests for the `pem` module.
+- A `str2ta()` function was added to the `util` module.
+### Fixed
+- A fatal error in the `base64.encodeData()` function.
+
 ## [2.3.2] - 2026-01-14
 ### Fixed
 - More things I missed, sigh.
@@ -77,7 +85,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/supernovus/lum.encode.js/compare/v2.3.2...HEAD
+[Unreleased]: https://github.com/supernovus/lum.encode.js/compare/v2.4.0...HEAD
+[2.4.0]: https://github.com/supernovus/lum.encode.js/compare/v2.3.2...v2.4.0
 [2.3.2]: https://github.com/supernovus/lum.encode.js/compare/v2.3.1...v2.3.2
 [2.3.1]: https://github.com/supernovus/lum.encode.js/compare/v2.3.0...v2.3.1
 [2.3.0]: https://github.com/supernovus/lum.encode.js/compare/v2.2.2...v2.3.0

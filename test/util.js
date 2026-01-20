@@ -1,4 +1,5 @@
-// Test 'util' module. 
+// Test a bunch of functions from the 'util' module.
+'use strict';
 
 const plan = 16;
 
@@ -32,7 +33,5 @@ t.diesWith(() => nba(s1, {size: 3, strict: true}), RangeError, NBA(':strict'));
 t.diesWith(() => nba(s1, 0), RangeError, NBA(':sizeBelowMin'));
 t.diesWith(() => nba(s1, {base: 1}), RangeError, NBA(':baseBelowMin'));
 t.diesWith(() => nba(s1, {base: 37}), RangeError, NBA(':baseAboveMax'));
-
-// TODO: test `wordToByteArray()`
 
 t.done();
