@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.4.1] - 2026-02-09
+### Changed
+- Refactored hashifier a bit to make resetting progressive digests simpler.
+- Made all the debugging info in hotp/totp modules optional.
+- Added `expires` to compiled options for totp module; provides the number
+  of seconds until the _current_ code expires.
+- Added a getExpiry() method to totp class that calculates and returns
+  just the current expiry information (useful for countdown displays).
+- Muted an expected error message in a test file.
+- Some other minor cleanups.
+
 ## [2.4.0] - 2026-01-19
 ### Added
 - A new `pem` module (which exports a `PEM` class) for parsing PEM strings.
@@ -85,7 +96,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/supernovus/lum.encode.js/compare/v2.4.0...HEAD
+[Unreleased]: https://github.com/supernovus/lum.encode.js/compare/v2.4.1...HEAD
+[2.4.1]: https://github.com/supernovus/lum.encode.js/compare/v2.4.0...v2.4.1
 [2.4.0]: https://github.com/supernovus/lum.encode.js/compare/v2.3.2...v2.4.0
 [2.3.2]: https://github.com/supernovus/lum.encode.js/compare/v2.3.1...v2.3.2
 [2.3.1]: https://github.com/supernovus/lum.encode.js/compare/v2.3.0...v2.3.1

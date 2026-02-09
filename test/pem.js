@@ -4,6 +4,7 @@
 const plan = 19;
 const t = require('@lumjs/tests').new({module, plan});
 const PEM = require('../lib/pem');
+const LC = require('@lumjs/core/console');
 
 // First set of tests is for valid data.
 
@@ -80,7 +81,9 @@ for (let pt of pemTests) {
   t.is(pem, null, pt.name);
 }
 
-t.dies(() => new PEM(pemTests[0].text), 'new PEM(invalid) throws');
+LC.muted(() => {
+  t.dies(() => new PEM(pemTests[0].text), 'new PEM(invalid) throws');
+});
 
 // Lastly tests with invalid base64 data.
 // These tests depend on a strict atob() function.
