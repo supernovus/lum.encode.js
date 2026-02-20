@@ -6,6 +6,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.5.0] - 2026-02-20
+### Added
+- A bunch of extra exports that are _module-sets_.
+- `util.bytesToHex()` to be the inverse of `hexToBytes()`.
+- A new `polyfill` sub-module that is not part of the default exports.
+  Currently just has polyfills for a few newer Uint8Array methods.
+### Changed
+- Added options to `util.hexToBytes()` for returning a Uint8Array.
+- Added options to `base64.fromBytes()` and `base64.toBytes()`.
+
 ## [2.4.1] - 2026-02-09
 ### Changed
 - Refactored hashifier a bit to make resetting progressive digests simpler.
@@ -96,7 +106,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/supernovus/lum.encode.js/compare/v2.4.1...HEAD
+[Unreleased]: https://github.com/supernovus/lum.encode.js/compare/v2.5.0...HEAD
+[2.5.0]: https://github.com/supernovus/lum.encode.js/compare/v2.4.1...v2.5.0
 [2.4.1]: https://github.com/supernovus/lum.encode.js/compare/v2.4.0...v2.4.1
 [2.4.0]: https://github.com/supernovus/lum.encode.js/compare/v2.3.2...v2.4.0
 [2.3.2]: https://github.com/supernovus/lum.encode.js/compare/v2.3.1...v2.3.2
