@@ -1,0 +1,24 @@
+module.exports = function(rb)
+{
+  rb.project
+  .add('index')
+  .types('./types/auto')
+  .add('base32')
+  .add('base64')
+  .add('base91')
+  .add('hash')
+  .add('hmac')
+  .add('hotp')
+  .add('polyfill')
+  .add('signature')
+  .add('totp')
+  .add('util')
+  .src('./lib/sets')
+  .types('./types/sets')
+  .add('all')
+  .add('base')
+  .add('digest')
+  .add('otp')
+  .add('sign')
+  .save();
+}

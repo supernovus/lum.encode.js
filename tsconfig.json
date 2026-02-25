@@ -1,0 +1,12 @@
+{
+  // I would use ["lib/**/*"] except I have no idea how to get typescript
+  // to recognise 'sets' aliases, so I'm building those .d.ts files by hand.
+  "include": ["lib/*.js"],
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "types/auto",
+    "declarationMap": true
+  }
+}

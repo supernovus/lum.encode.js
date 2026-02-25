@@ -1,45 +1,88 @@
 {
   "name": "@lumjs/encode",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "main": "lib/index.js",
-  "exports":
-  {
+  "exports": {
     ".": "./lib/index.js",
-    "./all": "./lib/sets/all.js",
-    "./base": "./lib/sets/base.js",
-    "./base32": "./lib/base32.js",
-    "./base64": "./lib/base64.js",
-    "./base91": "./lib/base91.js",
-    "./digest": "./lib/sets/digest.js",
-    "./hash": "./lib/hash.js",
-    "./hmac": "./lib/hmac.js",
-    "./hotp": "./lib/hotp.js",
-    "./otp": "./lib/sets/otp.js",
-    "./pem": "./lib/pem.js",
-    "./polyfill": "./lib/polyfill.js",
-    "./sign": "./lib/sets/sign.js",
-    "./signature": "./lib/signature.js",
-    "./totp": "./lib/totp.js",
-    "./util": "./lib/util.js",
+    "./base32": {
+      "types": "./types/auto/base32.d.ts",
+      "default": "./lib/base32.js"
+    },
+    "./base64": {
+      "types": "./types/auto/base64.d.ts",
+      "default": "./lib/base64.js"
+    },
+    "./base91": {
+      "types": "./types/auto/base91.d.ts",
+      "default": "./lib/base91.js"
+    },
+    "./hash": {
+      "types": "./types/auto/hash.d.ts",
+      "default": "./lib/hash.js"
+    },
+    "./hmac": {
+      "types": "./types/auto/hmac.d.ts",
+      "default": "./lib/hmac.js"
+    },
+    "./hotp": {
+      "types": "./types/auto/hotp.d.ts",
+      "default": "./lib/hotp.js"
+    },
+    "./polyfill": {
+      "types": "./types/auto/polyfill.d.ts",
+      "default": "./lib/polyfill.js"
+    },
+    "./signature": {
+      "types": "./types/auto/signature.d.ts",
+      "default": "./lib/signature.js"
+    },
+    "./totp": {
+      "types": "./types/auto/totp.d.ts",
+      "default": "./lib/totp.js"
+    },
+    "./util": {
+      "types": "./types/auto/util.d.ts",
+      "default": "./lib/util.js"
+    },
+    "./all": {
+      "types": "./types/sets/all.d.ts",
+      "default": "./lib/sets/all.js"
+    },
+    "./base": {
+      "types": "./types/sets/base.d.ts",
+      "default": "./lib/sets/base.js"
+    },
+    "./digest": {
+      "types": "./types/sets/digest.d.ts",
+      "default": "./lib/sets/digest.js"
+    },
+    "./otp": {
+      "types": "./types/sets/otp.d.ts",
+      "default": "./lib/sets/otp.js"
+    },
+    "./sign": {
+      "types": "./types/sets/sign.d.ts",
+      "default": "./lib/sets/sign.js"
+    },
     "./package.json": "./package.json"
   },
   "license": "MIT",
-  "repository":
-  {
+  "repository": {
     "type": "git",
     "url": "https://github.com/supernovus/lum.encode.js.git"
   },
-  "dependencies": 
-  {
+  "dependencies": {
     "@lumjs/core": "^1.28.0"
   },
-  "devDependencies":
-  {
+  "devDependencies": {
+    "@lumjs/build": "^1.2.0",
     "@lumjs/tests": "^2.0.0"
   },
-  "scripts":
-  {
-    "test": "node ./node_modules/@lumjs/tests/bin/lumtest.js",
-    "build-docs": "jsdoc -c ./jsdoc.json"
+  "scripts": {
+    "build": "npm run build-types && npm run build-meta && npm run build-docs",
+    "build-docs": "jsdoc -c ./jsdoc.js",
+    "build-meta": "lum-build",
+    "build-types": "npx -p typescript tsc",
+    "test": "node ./node_modules/@lumjs/tests/bin/lumtest.js"
   }
 }
