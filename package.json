@@ -1,6 +1,6 @@
 {
   "name": "@lumjs/encode",
-  "version": "2.6.0",
+  "version": "2.6.1",
   "main": "lib/index.js",
   "exports": {
     ".": "./lib/index.js",
@@ -46,23 +46,28 @@
     },
     "./all": {
       "types": "./types/sets/all.d.ts",
-      "default": "./lib/sets/all.js"
+      "require": "./lib/sets/all.js",
+      "import": "./lib/sets/all.mjs"
     },
     "./base": {
       "types": "./types/sets/base.d.ts",
-      "default": "./lib/sets/base.js"
+      "require": "./lib/sets/base.js",
+      "import": "./lib/sets/base.mjs"
     },
     "./digest": {
       "types": "./types/sets/digest.d.ts",
-      "default": "./lib/sets/digest.js"
+      "require": "./lib/sets/digest.js",
+      "import": "./lib/sets/digest.mjs"
     },
     "./otp": {
       "types": "./types/sets/otp.d.ts",
-      "default": "./lib/sets/otp.js"
+      "require": "./lib/sets/otp.js",
+      "import": "./lib/sets/otp.mjs"
     },
     "./sign": {
       "types": "./types/sets/sign.d.ts",
-      "default": "./lib/sets/sign.js"
+      "require": "./lib/sets/sign.js",
+      "import": "./lib/sets/sign.mjs"
     },
     "./package.json": "./package.json"
   },
@@ -79,8 +84,9 @@
     "@lumjs/tests": "^2.0.0"
   },
   "scripts": {
-    "build": "npm run build-types && npm run build-meta && npm run build-docs",
+    "build": "npm run build-info && npm run build-docs",
     "build-docs": "jsdoc -c ./jsdoc.js",
+    "build-info": "npm run build-types && npm run build-meta",
     "build-meta": "lum-build",
     "build-types": "npx -p typescript tsc",
     "test": "node ./node_modules/@lumjs/tests/bin/lumtest.js"

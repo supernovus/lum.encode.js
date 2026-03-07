@@ -6,8 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [2.6.0] - 2026-02-24
+## [2.6.1] - 2026-03-07
+- Thanks to the wonkiness of CJS vs ESM, I've added some stub .ejs files
+  for any of the module _sets_. Along with the types added in 2.6.0, this
+  is now actually useable in Typescript projects.
 
+## [2.6.0] - 2026-02-24
+- Moved to using [@lumjs/build] to build the docs and Typescript type defs.
+- Added some polyfills for a couple Uint8Array methods that aren't supported
+  on every runtime yet.
 
 ## [2.5.0] - 2026-02-20
 ### Added
@@ -109,7 +116,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/supernovus/lum.encode.js/compare/v2.6.0...HEAD
+[Unreleased]: https://github.com/supernovus/lum.encode.js/compare/v2.6.1...HEAD
+[2.6.1]: https://github.com/supernovus/lum.encode.js/compare/v2.6.0...v2.6.1
 [2.6.0]: https://github.com/supernovus/lum.encode.js/compare/v2.5.0...v2.6.0
 [2.5.0]: https://github.com/supernovus/lum.encode.js/compare/v2.4.1...v2.5.0
 [2.4.1]: https://github.com/supernovus/lum.encode.js/compare/v2.4.0...v2.4.1
