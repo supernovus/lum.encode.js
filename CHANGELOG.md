@@ -6,6 +6,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.7.0] - 2026-04-23
+### Added
+- `util.delimited()` and `util.stringy()` functions.
+### Changed
+- The `res` object returned by `hotp.generate()` method has had its toString()
+  method updated to use the delimited() function to add a space to the code.
+  So instead of `012345` it will show up as `012 345`. This is the format used
+  by many if not most authenticator apps to make the codes more readable.
+- The same `res` object also now has a toJSON() method that just returns
+  `this.toString()`, ensuring if the result is included in a JSON response, 
+  it's turned into a human readable code without all the internal properties.
+- A lot of this is for a new `optauth` package I'm working on that works with
+  the `otpauth://` and `otpauth-migration://` URL schemata used by Google
+  Authenticator and several other similar apps. That package and its sibling,
+  `otp-qr` will be released when they're ready.
+### Fixed
+- Missing `await` in `hotp.verify()` method.
+- The `signature` module actually exports its class now!
+
 ## [2.6.1] - 2026-03-07
 - Thanks to the wonkiness of CJS vs ESM, I've added some stub .ejs files
   for any of the module _sets_. Along with the types added in 2.6.0, this
@@ -116,7 +135,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/supernovus/lum.encode.js/compare/v2.6.1...HEAD
+[Unreleased]: https://github.com/supernovus/lum.encode.js/compare/v2.7.0...HEAD
+[2.7.0]: https://github.com/supernovus/lum.encode.js/compare/v2.6.1...v2.7.0
 [2.6.1]: https://github.com/supernovus/lum.encode.js/compare/v2.6.0...v2.6.1
 [2.6.0]: https://github.com/supernovus/lum.encode.js/compare/v2.5.0...v2.6.0
 [2.5.0]: https://github.com/supernovus/lum.encode.js/compare/v2.4.1...v2.5.0
@@ -133,4 +153,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.1.0]: https://github.com/supernovus/lum.encode.js/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/supernovus/lum.encode.js/releases/tag/v1.0.0
 [safe64-data]: https://github.com/supernovus/lum.safe64-data.js
-
