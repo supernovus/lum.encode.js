@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.8.0] - 2026-04-24
+### Changed
+- The `generate()` and `validate()` methods from `hotp` and `totp` have been
+  modified to have a simpler default argument signature. The old signatures
+  are still supported _for now_, but may be deprecated in version 3.x.
+### Added
+- Tests for the `hotp` and `totp` classes based on the test suite from [notp].
+- Some extra notes to the TODO.md with further plans for version 3.x.
+
 ## [2.7.0] - 2026-04-23
 ### Added
 - `util.delimited()` and `util.stringy()` functions.
@@ -135,7 +144,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/supernovus/lum.encode.js/compare/v2.7.0...HEAD
+[Unreleased]: https://github.com/supernovus/lum.encode.js/compare/v2.8.0...HEAD
+[2.8.0]: https://github.com/supernovus/lum.encode.js/compare/v2.7.0...v2.8.0
 [2.7.0]: https://github.com/supernovus/lum.encode.js/compare/v2.6.1...v2.7.0
 [2.6.1]: https://github.com/supernovus/lum.encode.js/compare/v2.6.0...v2.6.1
 [2.6.0]: https://github.com/supernovus/lum.encode.js/compare/v2.5.0...v2.6.0
@@ -153,3 +163,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.1.0]: https://github.com/supernovus/lum.encode.js/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/supernovus/lum.encode.js/releases/tag/v1.0.0
 [safe64-data]: https://github.com/supernovus/lum.safe64-data.js
+[notp]: https://www.npmjs.com/package/notp
