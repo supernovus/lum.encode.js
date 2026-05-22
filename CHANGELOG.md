@@ -6,6 +6,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.8.1] - 2026-05-22
+### Fixed
+- The 'otp' sub-module was broken when importing in ESM projects due to
+  the wrong file being loaded. Whoops!
+### Changed
+- Option to specify TOTP timestamp in seconds instead of milliseconds.
+- Locked `DEF_OPTS` objects to prevent modifications from outside code.
+
 ## [2.8.0] - 2026-04-24
 ### Changed
 - The `generate()` and `validate()` methods from `hotp` and `totp` have been
@@ -144,7 +152,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release.
 
-[Unreleased]: https://github.com/supernovus/lum.encode.js/compare/v2.8.0...HEAD
+[Unreleased]: https://github.com/supernovus/lum.encode.js/compare/v2.8.1...HEAD
+[2.8.1]: https://github.com/supernovus/lum.encode.js/compare/v2.8.0...v2.8.1
 [2.8.0]: https://github.com/supernovus/lum.encode.js/compare/v2.7.0...v2.8.0
 [2.7.0]: https://github.com/supernovus/lum.encode.js/compare/v2.6.1...v2.7.0
 [2.6.1]: https://github.com/supernovus/lum.encode.js/compare/v2.6.0...v2.6.1
